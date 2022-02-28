@@ -13,13 +13,15 @@ namespace Klassi_loomine
             inimene naine = new inimene("Kask");
             Console.WriteLine("Kui vana sa oled? ");
             naine.Vanus = int.Parse(Console.ReadLine());
+            Console.WriteLine("Missugune on sinu palk? ");
+            naine.Palk = int.Parse(Console.ReadLine());
             naine.Tervitamine();
 
-            inimene mees = new inimene();
-            mees.Perenimi = "Anton";
-            mees.Vanus = 17;
-            Console.WriteLine(mees.Perenimi + " on " + mees.Vanus + " aastane mees ");
-            mees.Tervitamine();
+            //inimene mees = new inimene();
+            //mees.Perenimi = "Anton";
+            //mees.Vanus = 17;
+            //Console.WriteLine(mees.Perenimi + " on " + mees.Vanus + " aastane mees ");
+            //mees.Tervitamine();
 
             inimene[] inimesed = new inimene[3];
             for (int i = 0; i < 3; i++)
