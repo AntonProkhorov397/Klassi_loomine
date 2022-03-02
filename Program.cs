@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +10,13 @@ namespace Klassi_loomine
     {
         static void Main(string[] args)
         {
-            inimene naine = new inimene("Kask");
+            Inimene naine = new Inimene();
             Console.WriteLine("Kui vana sa oled? ");
             naine.Vanus = int.Parse(Console.ReadLine());
             Console.WriteLine("Missugune on sinu palk? ");
             naine.Palk = int.Parse(Console.ReadLine());
+            double s = naine.SotsialMaks();
+            Console.WriteLine("Sinu sotsialMaks on " + s);
             naine.Tervitamine();
 
             //inimene mees = new inimene();
@@ -23,16 +25,16 @@ namespace Klassi_loomine
             //Console.WriteLine(mees.Perenimi + " on " + mees.Vanus + " aastane mees ");
             //mees.Tervitamine();
 
-            inimene[] inimesed = new inimene[3];
+            Inimene[] inimesed = new Inimene[3];
             for (int i = 0; i < 3; i++)
             {
-                inimesed[i] = new inimene();
+                inimesed[i] = new Inimene();
                 Console.WriteLine("Mis on sinu nimi? ");
                 inimesed[i]. Perenimi=Console.ReadLine();
                 Console.WriteLine("Kui vana sa oled? ");
                 inimesed[i]. Vanus = int.Parse(Console.ReadLine());
             }
-            foreach (inimene inimene in inimesed)
+            foreach (Inimene inimene in inimesed)
             {
                 inimene.Tervitamine();
             }
