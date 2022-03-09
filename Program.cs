@@ -10,6 +10,24 @@ namespace Klassi_loomine
     {
         static void Main(string[] args)
         {
+            Inimene i = new Opilane("Maksim", "Bomþ", "BOMÞ");
+            i.Kes_ma_olen();
+            i.Tervitamine();
+            Inimene[] inim = new Inimene[4];
+
+            inim[0] = new Opetaja();
+            inim[0].Kes_ma_olen();
+            inim[1] = new Opilane();
+            inim[1].Kes_ma_olen();
+            inim[2] = new Opetaja();
+            inim[2].Kes_ma_olen();
+            inim[3] = new Opilane();
+            inim[3].Kes_ma_olen();
+
+
+            Opilane o = new Opilane();
+            Console.WriteLine("Mis on sinu hind? ");
+            Inimene.Hinne = double.Parse(Console.ReadLine());
             Inimene naine = new Inimene();
             Console.WriteLine("Kui vana sa oled? ");
             naine.Vanus = int.Parse(Console.ReadLine());

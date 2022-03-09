@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Klassi_loomine
 {
-    class Inimene
+    public abstract class Inimene
     {
         string perenimi;
         public string status;
@@ -14,11 +14,11 @@ namespace Klassi_loomine
         public int palk;
         public string eesnimi;
         public string status1;
-        Emakeel emakeel;
-        public Emakeel Emakeel
-        {
-            get { return emakeel;  }
-        }
+        //Emakeel emakeel;
+        //public Emakeel Emakeel
+        //{
+        //    get { return emakeel;  }
+        //}
         public int Palk
         {
             set
@@ -45,11 +45,11 @@ namespace Klassi_loomine
 
         }
         public Inimene() { }
-        public Inimene(string Perenimi, Emakeel emakeel)
-        {
-            perenimi = Perenimi;
-            this.emakeel = emakeel;
-        }
+        //public Inimene(string Perenimi, Emakeel emakeel)
+        //{
+        //    perenimi = Perenimi;
+        //    this.emakeel = emakeel;
+        //}
         public Inimene(string Nimi, string Perenimi)
         {
             eesnimi = Nimi;
@@ -125,5 +125,6 @@ namespace Klassi_loomine
             SotsialMaks = palk * 0.33;
             return SotsialMaks;
         }
+        public abstract void Kes_ma_olen();
     }
 }
